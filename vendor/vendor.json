@@ -39,52 +39,52 @@
 			"revisionTime": "2016-01-01T10:54:49Z"
 		},
 		{
-			"checksumSHA1": "4Z/T8f0HeXnJX9u26YOL2GyasJ8=",
+			"checksumSHA1": "RlonYjs7FGBzrbBAH1hJi6pla/c=",
 			"path": "github.com/jacobsa/fuse",
-			"revision": "2642d571aa800c9ddca51e63800a57046970ce96",
-			"revisionTime": "2016-12-19T04:07:56Z"
+			"revision": "53c1819da09b4ee1d9a9c685cb9d14d4b0abb5c8",
+			"revisionTime": "2017-03-09T09:33:59Z"
 		},
 		{
 			"checksumSHA1": "N/KRZG2wlcmctqiiZGhukTuGFbI=",
 			"path": "github.com/jacobsa/fuse/fsutil",
-			"revision": "2642d571aa800c9ddca51e63800a57046970ce96",
-			"revisionTime": "2016-12-19T04:07:56Z"
+			"revision": "53c1819da09b4ee1d9a9c685cb9d14d4b0abb5c8",
+			"revisionTime": "2017-03-09T09:33:59Z"
 		},
 		{
-			"checksumSHA1": "60MIZJ6daWLhXnPD7m9ODqujvEo=",
+			"checksumSHA1": "KRWmtLxHeiE9WvkEtmYQeyckSl4=",
 			"path": "github.com/jacobsa/fuse/fuseops",
-			"revision": "2642d571aa800c9ddca51e63800a57046970ce96",
-			"revisionTime": "2016-12-19T04:07:56Z"
+			"revision": "53c1819da09b4ee1d9a9c685cb9d14d4b0abb5c8",
+			"revisionTime": "2017-03-09T09:33:59Z"
 		},
 		{
 			"checksumSHA1": "i9WjyyjzKty9qEEz7k1QRbMg880=",
 			"path": "github.com/jacobsa/fuse/fusetesting",
-			"revision": "2642d571aa800c9ddca51e63800a57046970ce96",
-			"revisionTime": "2016-12-19T04:07:56Z"
+			"revision": "53c1819da09b4ee1d9a9c685cb9d14d4b0abb5c8",
+			"revisionTime": "2017-03-09T09:33:59Z"
 		},
 		{
 			"checksumSHA1": "ajwBLpxjVkJv3YAWufmFDVxbvNI=",
 			"path": "github.com/jacobsa/fuse/fuseutil",
-			"revision": "2642d571aa800c9ddca51e63800a57046970ce96",
-			"revisionTime": "2016-12-19T04:07:56Z"
+			"revision": "53c1819da09b4ee1d9a9c685cb9d14d4b0abb5c8",
+			"revisionTime": "2017-03-09T09:33:59Z"
 		},
 		{
-			"checksumSHA1": "DTwRlHeZ2wEOlHZ8lK85PaV1pAM=",
+			"checksumSHA1": "aqxqosCHYFWOKKPlt4ZDyFjmRHE=",
 			"path": "github.com/jacobsa/fuse/internal/buffer",
-			"revision": "2642d571aa800c9ddca51e63800a57046970ce96",
-			"revisionTime": "2016-12-19T04:07:56Z"
+			"revision": "53c1819da09b4ee1d9a9c685cb9d14d4b0abb5c8",
+			"revisionTime": "2017-03-09T09:33:59Z"
 		},
 		{
 			"checksumSHA1": "ZetWNSeIsB2EgRxoUpFOQu+yXco=",
 			"path": "github.com/jacobsa/fuse/internal/freelist",
-			"revision": "2642d571aa800c9ddca51e63800a57046970ce96",
-			"revisionTime": "2016-12-19T04:07:56Z"
+			"revision": "53c1819da09b4ee1d9a9c685cb9d14d4b0abb5c8",
+			"revisionTime": "2017-03-09T09:33:59Z"
 		},
 		{
 			"checksumSHA1": "dtdosMzKZeBj6Fwh/x/7nq5Tc4Y=",
 			"path": "github.com/jacobsa/fuse/internal/fusekernel",
-			"revision": "2642d571aa800c9ddca51e63800a57046970ce96",
-			"revisionTime": "2016-12-19T04:07:56Z"
+			"revision": "53c1819da09b4ee1d9a9c685cb9d14d4b0abb5c8",
+			"revisionTime": "2017-03-09T09:33:59Z"
 		},
 		{
 			"checksumSHA1": "/1IfqA99OUuyxyAeuD0It6YIwrI=",
