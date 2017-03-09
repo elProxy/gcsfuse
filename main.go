@@ -43,7 +43,6 @@ import (
 	"github.com/jacobsa/fuse"
 	"github.com/jacobsa/gcloud/gcs"
 	"github.com/jacobsa/syncutil"
-	"github.com/kardianos/osext"
 )
 
 ////////////////////////////////////////////////////////////////////////
@@ -293,35 +292,22 @@ func runCLIApp(c *cli.Context) (err error) {
 
 	fmt.Fprintf(os.Stderr, "Using mount point: %s\n", mountPoint)
 
+	// Change working directories so that we don't prevent unmounting of the
+	// volume of our current working directory.
+	err = os.Chdir("/")
+	if err != nil {
+		return
+	}
 	// If we haven't been asked to run in foreground mode, we should run a daemon
 	// with the foreground flag set and wait for it to mount.
 	if !flags.Foreground {
-		// Find the executable.
-		var path string
-		path, err = osext.Executable()
-		if err != nil {
-			err = fmt.Errorf("osext.Executable: %v", err)
-			return
-		}
-
 		// Set up arguments. Be sure to use foreground mode, and to send along the
 		// potentially-modified mount point.
 		args := append([]string{"--foreground"}, os.Args[1:]...)
 		args[len(args)-1] = mountPoint
 
-		// Pass along PATH so that the daemon can find fusermount on Linux.
-		env := []string{
-			fmt.Sprintf("PATH=%s", os.Getenv("PATH")),
-		}
-
-		// Pass along GOOGLE_APPLICATION_CREDENTIALS, since we document in
-		// mounting.md that it can be used for specifying a key file.
-		if p, ok := os.LookupEnv("GOOGLE_APPLICATION_CREDENTIALS"); ok {
-			env = append(env, fmt.Sprintf("GOOGLE_APPLICATION_CREDENTIALS=%s", p))
-		}
-
 		// Run.
-		err = daemonize.Run(path, args, env, os.Stderr)
+		err = daemonize.Run(args, os.Stderr)
 		if err != nil {
 			err = fmt.Errorf("daemonize.Run: %v", err)
 			return
@@ -334,7 +320,7 @@ func runCLIApp(c *cli.Context) (err error) {
 	// daemonize gives us and telling it about the outcome.
 	var mfs *fuse.MountedFileSystem
 	{
-		mountStatus := log.New(daemonize.StatusWriter, "", 0)
+		mountStatus := log.New(os.Stdout, "", 0)
 		mfs, err = mountWithArgs(bucketName, mountPoint, flags, mountStatus)
 
 		if err == nil {
